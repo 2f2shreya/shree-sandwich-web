@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Our Story - Shree Sandwich</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@500;600;700&family=Source+Serif+4:wght@400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#00210b",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1b1b1e",
+                        "on-secondary-fixed-variant": "#005226",
+                        "on-primary-fixed": "#2f1500",
+                        "on-surface": "#1b1b1e",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e4e1e5",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#2a1700",
+                        "outline-variant": "#dbc2b0",
+                        "tertiary-container": "#a36700",
+                        "on-secondary-container": "#24703e",
+                        "surface-container-highest": "#e4e1e5",
+                        "on-primary-fixed-variant": "#6e3900",
+                        "inverse-on-surface": "#f3f0f4",
+                        "primary-container": "#b15f00",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#904d00",
+                        "primary": "#8d4b00",
+                        "inverse-primary": "#ffb77d",
+                        "outline": "#887364",
+                        "on-surface-variant": "#554336",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "surface-bright": "#fbf8fc",
+                        "primary-fixed": "#ffdcc3",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "surface": "#fbf8fc",
+                        "tertiary": "#825100",
+                        "secondary-fixed-dim": "#8bd79b",
+                        "surface-dim": "#dcd9dd",
+                        "secondary-container": "#a4f1b2",
+                        "inverse-surface": "#303033",
+                        "surface-container-low": "#f5f3f6",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffddb8",
+                        "primary-fixed-dim": "#ffb77d",
+                        "on-primary-container": "#fffbff",
+                        "on-tertiary-container": "#fffbff",
+                        "background": "#fbf8fc",
+                        "secondary": "#1f6c3a",
+                        "surface-container-high": "#eae7eb",
+                        "surface-container": "#f0edf1",
+                        "secondary-fixed": "#a6f4b5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "48px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "title-md": ["Plus Jakarta Sans"],
+                        "body-md": ["\"Source Serif 4\""],
+                        "body-lg": ["\"Source Serif 4\""],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+  </script>
+  <style>
+        .reveal-text {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+  </style>
+  <script type="module" crossorigin src="./assets/index-Cyq5Wses.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CCOf0xc8.css">
+</head>
+<body class="min-h-screen flex flex-col bg-[#0d0d11]">
+
+  <!-- Preloader Screen -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-content">
+      <span class="loader-eyebrow">Artisanal Culinary Studio</span>
+      <h1 class="loader-title">Shree Sandwich</h1>
+      <p class="loader-subtitle">Preparing the interactive culinary laboratory...</p>
+      <div class="progress-bar-container">
+        <div id="loader-progress" class="progress-bar"></div>
+      </div>
+      <div id="loader-percentage" class="loader-percentage">0%</div>
+    </div>
+  </div>
+
+  <!-- Top Navigation Bar -->
+  <header class="app-header">
+    <div class="header-logo">
+      <span class="logo-bold">SHREE</span>
+      <span class="logo-light"> SANDWICH</span>
+    </div>
+    <nav class="header-nav">
+      <a href="#story" class="nav-link active">Home</a>
+      <a href="#profile" class="nav-link">About Us</a>
+      <a href="#ingredients" class="nav-link">Menu</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="header-action">
+      <a href="#contact" class="btn btn-primary">Order Now</a>
+    </div>
+  </header>
+
+  <!-- Scroll Animation Container -->
+  <section id="story" class="story-section">
+    <!-- Sticky Canvas Wrapper -->
+    <div class="canvas-container">
+      <canvas id="animation-canvas"></canvas>
+      <div class="canvas-gradient-overlay"></div>
+    </div>
+
+    <!-- Scroll Controlled Narration Layers -->
+    <div class="narrations-wrapper">
+      <div class="narration-step" data-frame-start="0" data-frame-end="35">
+        <div class="narration-card">
+          <span class="step-num">01</span>
+          <h2 class="step-title">The Base Layer</h2>
+          <p class="step-desc">A thick slice of artisanal sourdough bread, naturally leavened, and toasted to produce a highly crunchy crust with a soft, airy crumb.</p>
+          <div class="step-metric">
+            <span class="metric-label">Thickness</span>
+            <span class="metric-val">1.8 cm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="narration-step" data-frame-start="36" data-frame-end="75">
+        <div class="narration-card">
+          <span class="step-num">02</span>
+          <h2 class="step-title">Artisanal Pesto</h2>
+          <p class="step-desc">Lively, freshly crushed basil pesto spread across the toasted crumb, releasing aromas of roasted pine nuts, parmesan cheese, and garlic.</p>
+          <div class="step-metric">
+            <span class="metric-label">Oil Profile</span>
+            <span class="metric-val">Extra Virgin</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="narration-step" data-frame-start="76" data-frame-end="115">
+        <div class="narration-card">
+          <span class="step-num">03</span>
+          <h2 class="step-title">Crisp Arugula</h2>
+          <p class="step-desc">Fresh, peppery wild baby rocket leaves form the first texture barrier, introducing a pleasant crunch and spicy herbal notes.</p>
+          <div class="step-metric">
+            <span class="metric-label">Source</span>
+            <span class="metric-val">100% Organic</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="narration-step" data-frame-start="116" data-frame-end="155">
+        <div class="narration-card">
+          <span class="step-num">04</span>
+          <h2 class="step-title">Heritage Tomatoes</h2>
+          <p class="step-desc">Perfectly ripe heirloom tomatoes, sliced thick and sprinkled with fine Maldon sea salt flakes to extract their sweet, umami juice.</p>
+          <div class="step-metric">
+            <span class="metric-label">Acidity</span>
+            <span class="metric-val">Low &amp; Sweet</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="narration-step" data-frame-start="156" data-frame-end="195">
+        <div class="narration-card">
+          <span class="step-num">05</span>
+          <h2 class="step-title">Buffalo Mozzarella</h2>
+          <p class="step-desc">Fresh, creamy buffalo mozzarella from Campania, hand-torn to preserve the delicate milk pockets that enrich every single bite.</p>
+          <div class="step-metric">
+            <span class="metric-label">Texture</span>
+            <span class="metric-val">Creamy / Soft</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="narration-step" data-frame-start="196" data-frame-end="240">
+        <div class="narration-card">
+          <span class="step-num">06</span>
+          <h2 class="step-title">The Crown</h2>
+          <p class="step-desc">Topped with a drizzle of balsamic reduction and the matching sourdough crust. Compressed gently to combine the juices into a single masterpiece.</p>
+          <div class="step-metric">
+            <span class="metric-label">Profile</span>
+            <span class="metric-val">Ready to serve</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurant Profile & Details Section -->
+  <section id="profile" class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-surface dark:bg-surface-dim transition-colors duration-300 w-full border-b border-white/5">
+    <div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Left: Brand Info & Ratings -->
+      <div class="lg:col-span-7 reveal-text">
+        <span class="text-xs uppercase tracking-widest text-primary font-bold mb-3 block">Authentic Local Flavors</span>
+        <h2 class="text-3xl md:text-4xl font-headline-lg-mobile md:font-display-lg text-on-surface mb-6 font-semibold">Shree Sandwich, CIDCO</h2>
+        <p class="text-body-md text-on-surface-variant mb-8 leading-relaxed">
+          Savor the ultimate crunch at Aurangabad's favorite spot for artisanal sandwiches and street food. Located near Raju Gandhi Stadium, we bring together fresh ingredients, rich traditions, and contemporary fast-food fusion to create every dish on our menu.
+        </p>
+
+        <!-- Ratings Dashboard -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-surface-container-low p-6 rounded-2xl border border-white/5">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 text-xl font-bold">3.3 ★</div>
+            <div>
+              <div class="text-sm font-semibold text-on-surface">Dining Rating</div>
+              <div class="text-xs text-on-surface-variant">4 Verified Reviews</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 border-t sm:border-t-0 sm:border-l border-white/5 pt-4 sm:pt-0 sm:pl-6">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 text-xl font-bold">4.1 ★</div>
+            <div>
+              <div class="text-sm font-semibold text-on-surface">Delivery Rating</div>
+              <div class="text-xs text-on-surface-variant">1,038 Verified Orders</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cuisines -->
+        <div class="mt-8">
+          <h4 class="text-xs uppercase tracking-wider text-on-surface-variant font-bold mb-3">Popular Cuisines</h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-white/5 text-on-surface border border-white/5">🥪 Sandwich</span>
+            <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-white/5 text-on-surface border border-white/5">🌶️ Street Food</span>
+            <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-white/5 text-on-surface border border-white/5">🍜 Chinese</span>
+            <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-white/5 text-on-surface border border-white/5">🍟 Fast Food</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Operational & Contact Details Cards -->
+      <div class="lg:col-span-5 grid grid-cols-1 gap-6 reveal-text delay-200">
+        
+        <!-- Quick Stats Grid -->
+        <div class="bg-surface-container-lowest p-8 rounded-2xl border border-white/5 shadow-sm space-y-6">
+          <div class="flex gap-4">
+            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+            <div>
+              <h4 class="text-sm font-bold text-on-surface mb-1">Our Location</h4>
+              <p class="text-xs text-on-surface-variant">Plot 1190, Sai Nagar, Near Raju Gandhi Stadium, CIDCO, Aurangabad</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 border-t border-white/5 pt-6">
+            <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">schedule</span>
+            <div>
+              <h4 class="text-sm font-bold text-on-surface mb-1">Operational Hours</h4>
+              <p class="text-xs text-on-surface-variant mb-1">10:45 AM – 10:45 PM (Today)</p>
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold bg-amber-500/10 text-amber-500">Closes in 1 hour 28 minutes</span>
+            </div>
+          </div>
+
+          <div class="flex gap-4 border-t border-white/5 pt-6">
+            <span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">payments</span>
+            <div>
+              <h4 class="text-sm font-bold text-on-surface mb-1">Average Cost</h4>
+              <p class="text-xs text-on-surface-variant">₹150 for two people (approx.)</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 border-t border-white/5 pt-6">
+            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">call</span>
+            <div>
+              <h4 class="text-sm font-bold text-on-surface mb-1">Call Us Direct</h4>
+              <a href="tel:+919370407179" class="text-xs text-primary hover:underline font-semibold">+91 93704 07179</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="flex gap-4">
+          <a href="#contact" class="flex-1 text-center bg-primary text-on-primary py-3.5 rounded-xl font-bold text-sm hover:opacity-90 transition-opacity">Order Online</a>
+          <a href="#contact" class="flex-1 text-center bg-white/5 text-on-surface border border-white/10 py-3.5 rounded-xl font-bold text-sm hover:bg-white/10 transition-colors">View Gallery</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- The Foundation (Sourdough) Section -->
+  <section id="sourdough" class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-surface dark:bg-surface-dim transition-colors duration-300 w-full">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center max-w-container-max mx-auto">
+      <div class="md:col-span-5 md:col-start-2 reveal-text">
+        <h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-primary mb-4">About Shree Sandwich: Wild Fermentation</h2>
+        <p class="text-body-md font-body-md text-on-surface-variant mb-6">
+          Greatness takes time. Our signature sourdough isn't rushed. It's born from a carefully nurtured starter and allowed a slow, 48-hour fermentation process. This patience yields a complex, tangy flavor profile and an airy, structured crumb that holds up perfectly to our hearty fillings.
+        </p>
+        <div class="flex items-center gap-4 text-secondary text-label-md font-label-md bg-secondary/10 px-4 py-2 rounded-full w-max">
+          <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grain</span>
+          Locally Milled Heritage Grains
+        </div>
+      </div>
+      <div class="md:col-span-5 md:col-start-8 mt-12 md:mt-0">
+        <div class="rounded-2xl overflow-hidden shadow-sm bg-surface-container-lowest p-2">
+          <img class="w-full h-auto rounded-xl object-cover aspect-square" data-alt="Shree Sandwich Storefront CIDCO" src="./storefront.jpg"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="ingredients" class="py-24 bg-surface-container-low px-margin-mobile md:px-margin-desktop w-full border-b border-white/5">
+    <div class="max-w-container-max mx-auto">
+      <div class="text-center mb-16 reveal-text">
+        <span class="text-xs uppercase tracking-widest text-primary font-bold mb-3 block">Symphony of Taste</span>
+        <h2 class="text-3xl md:text-4xl font-headline-lg-mobile md:font-display-lg text-on-surface mb-4 font-semibold">Our Menu</h2>
+        <p class="text-body-md text-on-surface-variant max-w-2xl mx-auto">Handcrafted sandwiches, fresh fast food, and signature cold beverages. Sourced fresh, made to order.</p>
+      </div>
+
+      <!-- Menu Categories Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-20 reveal-text">
+        
+        <!-- Column 1: Sandwiches & Burgers -->
+        <div class="space-y-12">
+          <!-- Sandwiches Category -->
+          <div>
+            <h3 class="text-xl font-bold text-primary border-b border-white/5 pb-3 mb-6 flex items-center gap-2">
+              <span class="material-symbols-outlined">sandwich</span> Sandwiches
+            </h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Vegetable Sandwich</span><span class="text-primary font-bold">₹40</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Veg Cheese Sandwich</span><span class="text-primary font-bold">₹60</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Veg Mayonnaise Sandwich</span><span class="text-primary font-bold">₹60</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Plain Cheese Sandwich</span><span class="text-primary font-bold">₹60</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Aloo Masala Sandwich</span><span class="text-primary font-bold">₹70</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Cheese Corn Sandwich</span><span class="text-primary font-bold">₹70</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Cheese Chilli Sandwich</span><span class="text-primary font-bold">₹70</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Cheese Garlic Sandwich</span><span class="text-primary font-bold">₹70</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Chocolate Sandwich</span><span class="text-primary font-bold">₹70</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Tandoori Paneer Sandwich</span><span class="text-primary font-bold">₹80</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Paneer Makhani Sandwich</span><span class="text-primary font-bold">₹80</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Peri Peri Paneer Sandwich</span><span class="text-primary font-bold">₹80</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Mix Sandwich</span><span class="text-primary font-bold">₹80</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Aloo Tikki Sandwich</span><span class="text-primary font-bold">₹80</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Cheese Chocolate Sandwich</span><span class="text-primary font-bold">₹80</span></div>
+            </div>
+          </div>
+
+          <!-- Burgers Category -->
+          <div>
+            <h3 class="text-xl font-bold text-primary border-b border-white/5 pb-3 mb-6 flex items-center gap-2">
+              <span class="material-symbols-outlined">lunch_dining</span> Burgers
+            </h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Veggie Burger</span><span class="text-primary font-bold">₹70</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Veggie Cheese Burger</span><span class="text-primary font-bold">₹90</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Cheese Paneer Burger</span><span class="text-primary font-bold">₹100</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Pizza, Fries, Cold Coffee, Milkshakes -->
+        <div class="space-y-12">
+          <!-- Pizza Category -->
+          <div>
+            <h3 class="text-xl font-bold text-primary border-b border-white/5 pb-3 mb-6 flex items-center gap-2">
+              <span class="material-symbols-outlined">local_pizza</span> Pizza
+            </h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Cheese Margherita Pizza</span><span class="text-primary font-bold">₹120</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Golden Corn Cheese Pizza</span><span class="text-primary font-bold">₹130</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Vegetable Delight Pizza</span><span class="text-primary font-bold">₹150</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Paneer Makhani Pizza</span><span class="text-primary font-bold">₹160</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Paneer Tandoori Pizza</span><span class="text-primary font-bold">₹160</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Cheese Burst Pizza</span><span class="text-primary font-bold">₹180</span></div>
+              <div class="flex justify-between items-center text-xs text-on-surface-variant italic"><span>* Extra Cheese</span><span class="text-primary">₹20</span></div>
+            </div>
+          </div>
+
+          <!-- Fries Category -->
+          <div>
+            <h3 class="text-xl font-bold text-primary border-b border-white/5 pb-3 mb-6 flex items-center gap-2">
+              <span class="material-symbols-outlined">cookie</span> Fries
+            </h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Salted Fries</span><span class="text-primary font-bold">₹60</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Cheese Fries</span><span class="text-primary font-bold">₹70</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Peri Peri Fries</span><span class="text-primary font-bold">₹70</span></div>
+            </div>
+          </div>
+
+          <!-- Cold Coffee Category -->
+          <div>
+            <h3 class="text-xl font-bold text-primary border-b border-white/5 pb-3 mb-6 flex items-center gap-2">
+              <span class="material-symbols-outlined">local_cafe</span> Cold Coffee
+            </h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Cold Coffee</span><span class="text-primary font-bold">₹50</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Cold Coffee Chocolate</span><span class="text-primary font-bold">₹60</span></div>
+            </div>
+          </div>
+
+          <!-- Milkshakes Category -->
+          <div>
+            <h3 class="text-xl font-bold text-primary border-b border-white/5 pb-3 mb-6 flex items-center gap-2">
+              <span class="material-symbols-outlined">liquor</span> Milkshakes
+            </h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Strawberry Shake</span><span class="text-primary font-bold">₹50</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Blueberry Shake</span><span class="text-primary font-bold">₹50</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Chocolate Shake</span><span class="text-primary font-bold">₹70</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Oreo Shake</span><span class="text-primary font-bold">₹70</span></div>
+              <div class="flex justify-between items-center"><span class="text-on-surface font-medium">Kit kat Shake</span><span class="text-primary font-bold">₹70</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer / Contact Component -->
+  <footer id="contact" class="bg-surface-container-highest dark:bg-inverse-surface full-width mt-auto w-full">
+    <div class="flex flex-col items-center w-full px-margin-mobile md:px-margin-desktop py-16 gap-8 max-w-container-max mx-auto flat no shadows">
+      <div class="text-headline-lg font-display-lg text-on-surface dark:text-inverse-on-surface">
+        Shree Sandwich
+      </div>
+      <div class="flex flex-col md:flex-row gap-8 text-center md:text-left text-body-md text-on-surface-variant max-w-2xl">
+        <div>
+          <h4 class="font-bold text-on-surface mb-2">📍 Address</h4>
+          <p>Plot 1190, Sai Nagar, Near Raju Gandhi Stadium, CIDCO, Aurangabad</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-on-surface mb-2">📞 Call Us</h4>
+          <p><a href="tel:+919370407179" class="hover:underline text-primary font-semibold">+91 93704 07179</a></p>
+        </div>
+        <div>
+          <h4 class="font-bold text-on-surface mb-2">⏰ Hours</h4>
+          <p>10:45 AM – 10:45 PM (Daily)</p>
+        </div>
+      </div>
+      <nav class="flex flex-wrap justify-center gap-6 md:gap-8 mt-4">
+        <a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-on-surface hover:underline transition-all opacity-100 hover:opacity-80 transition-opacity text-label-md font-label-md" href="#">Privacy Policy</a>
+        <a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-on-surface hover:underline transition-all opacity-100 hover:opacity-80 transition-opacity text-label-md font-label-md" href="#">Terms of Service</a>
+        <a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-on-surface hover:underline transition-all opacity-100 hover:opacity-80 transition-opacity text-label-md font-label-md" href="#">Press Kit</a>
+        <a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface dark:hover:text-on-surface hover:underline transition-all opacity-100 hover:opacity-80 transition-opacity text-label-md font-label-md" href="#">Contact Us</a>
+      </nav>
+      <div class="text-body-md font-body-md text-primary dark:text-primary-fixed-dim mt-4">
+        © 2026 Shree Sandwich. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
