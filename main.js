@@ -84,13 +84,13 @@ function drawFrame(index) {
   let offsetY = 0;
 
   if (canvasRatio > imgRatio) {
-    // Canvas is wider than image aspect ratio
-    drawHeight = canvasWidth / imgRatio;
-    offsetY = (canvasHeight - drawHeight) / 2;
-  } else {
-    // Canvas is taller than image aspect ratio
+    // Canvas is wider than image aspect ratio -> fit height
     drawWidth = canvasHeight * imgRatio;
     offsetX = (canvasWidth - drawWidth) / 2;
+  } else {
+    // Canvas is taller than image aspect ratio -> fit width
+    drawHeight = canvasWidth / imgRatio;
+    offsetY = (canvasHeight - drawHeight) / 2;
   }
 
   context.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
