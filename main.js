@@ -5,6 +5,20 @@ const TOTAL_FRAMES = 240;
 const frames = [];
 const frameStatus = { loaded: 0 };
 
+// Helper to determine the correct base URL dynamically
+// This solves subfolder deployment pathing (like GitHub Pages "/shree-sandwich-web/")
+function getBaseUrl() {
+  let path = window.location.pathname;
+  if (path.endsWith('.html')) {
+    path = path.substring(0, path.lastIndexOf('/'));
+  }
+  if (!path.endsWith('/')) {
+    path += '/';
+  }
+  return path;
+}
+const BASE_URL = getBaseUrl();
+
 // Select elements
 const loader = document.getElementById('loader');
 const progress = document.getElementById('loader-progress');
@@ -15,6 +29,7 @@ const storySection = document.getElementById('story');
 const narrationSteps = document.querySelectorAll('.narration-step');
 const header = document.querySelector('.app-header');
 const navLinks = document.querySelectorAll('.nav-link');
+const storefrontImg = document.getElementById('storefront-img');
 
 // Setup Canvas size
 function resizeCanvas() {
@@ -169,7 +184,7 @@ function preloadFrames() {
     for (let i = 1; i <= TOTAL_FRAMES; i++) {
       const img = new Image();
       const frameNum = String(i).padStart(3, '0');
-      img.src = `frames/ezgif-frame-${frameNum}.jpg`;
+      img.src = `${BASE_URL}frames/ezgif-frame-${frameNum}.jpg`;
       
       img.onload = () => {
         frameStatus.loaded++;
@@ -203,6 +218,11 @@ async function init() {
   if (header) {
     header.style.background = 'transparent';
     header.style.borderBottomColor = 'transparent';
+  }
+
+  // Bind storefront image src dynamically
+  if (storefrontImg) {
+    storefrontImg.src = `${BASE_URL}storefront.jpg`;
   }
 
   // Load assets
