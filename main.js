@@ -169,7 +169,7 @@ function preloadFrames() {
     for (let i = 1; i <= TOTAL_FRAMES; i++) {
       const img = new Image();
       const frameNum = String(i).padStart(3, '0');
-      img.src = `/frames/ezgif-frame-${frameNum}.jpg`;
+      img.src = `frames/ezgif-frame-${frameNum}.jpg`;
       
       img.onload = () => {
         frameStatus.loaded++;
